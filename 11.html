@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 태그</title>
+</head>
+
+<body>
+    <form method="get" action="a.jsp">
+        <label for="emilid">E-mail</label>
+        <input type="email" id="emailid" name="email" required><br>
+        <input type="date" id="birthday" name="birthday"><br>
+        <fieldset>
+            <legend>좋아하는 언어</legend>
+            <label><input type="radio" name="fav" value="python">파이썬</label>
+            <label><input type="radio" name="fav" value="R">R</label>
+            <label><input type="radio" name="fav" value="Java" id="javaid">자바</label>
+        </fieldset>
+        <input type="submit" value="확인">
+        <input type="reset" value="취소">
+        <input type="button" value="버튼">
+    </form>
+</body>
+
+</html>
