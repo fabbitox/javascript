@@ -26,9 +26,17 @@ document.addEventListener("DOMContentLoaded", () => {
     } */
 
     let htmlText = "<ul>";
-    for (let item of bts) {
+    for (let [idx, item] of bts.entries()) {
         htmlText += `<li>${item.textContent}</li>`;
+        item.setAttribute("onclick", `randomColor(${idx});`);
     }
     htmlText += "</ul>";
     document.querySelector("#h2id").innerHTML = htmlText;
 });
+
+function randomColor(idx) {
+    let colorStr = "#" + Math.floor(Math.random() * 0x1000000).toString(16);
+    console.log(idx, colorStr);
+    console.log(document.querySelectorAll("#h2id li")[idx]);
+    document.querySelectorAll("#h2id li")[idx].style.color = colorStr;
+}
