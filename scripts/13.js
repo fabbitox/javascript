@@ -6,7 +6,10 @@
 
 const show = () => {
     event.preventDefault();
-    document.getElementById("h2id").innerHTML = '<img src="./images/' + Math.ceil(Math.random() * 6) + '.png">';
+    let n = Math.floor(Math.random() * 6) + 1;
+    console.log(n);
+    //document.getElementById("h2id").innerHTML = '<img src="./images/' + n + '.png">';
+    document.getElementById("h2id").innerHTML = `<img src="./images/${n}.png">`;
 };
 
 /* document.addEventListener("DOMContentLoaded", function () {
