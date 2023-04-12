@@ -10,28 +10,40 @@ document.addEventListener("DOMContentLoaded", () => {
     const fromval = document.getElementById("fromval");
     const toval = document.getElementById("toval");
 
-    fromsel.addEventListener("change", () => {
+    function setText() {
         fromtx.textContent = fromsel.value;
-        fromsel.value == '℃' ? tosel.value = '℉' : tosel.value = '℃';
+        totx.textContent = tosel.value;
+    }
+
+    fromsel.addEventListener("change", () => {
+        autoSel(fromsel, tosel);
+        console.log(fromsel.value);
+        setText();
+        //fromsel.value == '℃' ? tosel.value = '℉' : tosel.value = '℃';
         calculate();
     });
     tosel.addEventListener("change", () => {
-        totx.textContent = tosel.value;
-        tosel.value == '℃' ? fromsel.value = '℉' : fromsel.value = '℃';
+        autoSel(tosel, fromsel);
+        setText();
+        //tosel.value == '℃' ? fromsel.value = '℉' : fromsel.value = '℃';
         calculate();
     });
 
     const calculate = () => {
-        /* if (fromsel.value == '℃') {
-            toval.value = tosel.value == '℃' ? fromval.value : fromval.value * 1.8 + 32;
-        } else {
-            toval.value = tosel.value == '℃' ? (fromval.value - 32) * 5 / 9 : fromval.value;
-        } */
-        /* if (fromsel.value == tosel.value) {// 같을 일이 없어짐
-            toval.value = fromval.value;
-        } */
-        toval.value = tosel.value == '℃' ? fromval.value * 1.8 + 32 : (fromval.value - 32) * 5 / 9;
+        toval.value = tosel.value == '℃' ? cToF(fromval.value) : fToC(fromval.value);
     };
 
     fromval.addEventListener("input", calculate);
 });
+
+const cToF = (cTemp) => {
+    return cTemp * 1.8 + 32;
+}
+
+const fToC = (fTemp) => {
+    return (fTemp - 32) * 5 / 9;
+}
+
+const autoSel = (change, tobe) => {
+    change.value == '℃' ? tobe.value = '℉' : tobe.value = '℃';
+}
