@@ -20,10 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const calculate = () => {
-        if (fromsel.value == '℃') {
+        /* if (fromsel.value == '℃') {
             toval.value = tosel.value == '℃' ? fromval.value : fromval.value * 1.8 + 32;
         } else {
             toval.value = tosel.value == '℃' ? (fromval.value - 32) * 5 / 9 : fromval.value;
+        } */
+        if (fromsel.value == tosel.value) {
+            toval.value = tosel.value;
+        }
+        else {
+            toval.value = tosel.value == '℃' ? fromval.value * 1.8 + 32 : (fromval.value - 32) * 5 / 9;
         }
     };
 
