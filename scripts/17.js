@@ -21,17 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const calculate = () => {
         if (fromsel.value == '℃') {
-            if (tosel.value == '℃') {
-                toval.value = fromval.value;
-            } else {
-                toval.value = fromval.value * 1.8 + 32;
-            }
+            toval.value = tosel.value == '℃' ? fromval.value : fromval.value * 1.8 + 32;
         } else {
-            if (tosel.value == '℃') {
-                toval.value = (fromval.value - 32) * 5 / 9;
-            } else {
-                toval.value = fromval.value;
-            }
+            toval.value = tosel.value == '℃' ? (fromval.value - 32) * 5 / 9 : fromval.value;
         }
     };
 
