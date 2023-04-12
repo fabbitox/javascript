@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             toval.value = tosel.value == '℃' ? (fromval.value - 32) * 5 / 9 : fromval.value;
         } */
         if (fromsel.value == tosel.value) {
-            toval.value = tosel.value;
+            toval.value = fromval.value;
         }
         else {
             toval.value = tosel.value == '℃' ? fromval.value * 1.8 + 32 : (fromval.value - 32) * 5 / 9;
