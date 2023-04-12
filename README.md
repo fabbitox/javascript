@@ -6,4 +6,8 @@
 
 4/11
 + 주사위
-+ querySelector, for 사용
++ querySelector, for, DOM CRUD
+
+4/12
++ 주사위 2
++ 온도변환
