@@ -1,0 +1,25 @@
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 80px;
+    font-size: larger;
+    border: 1px solid;
+}
+
+.row {
+    display: flex-box;
+}
+
+#gameboard {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    border: 1px solid;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
