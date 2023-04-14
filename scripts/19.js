@@ -20,9 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let delbtn of delbtns) {
         delbtn.addEventListener("click", (e) => {
             e.preventDefault();
-            //const fruit = delbtn.textContent.replace(" 삭제", "");
             const btnText = delbtn.textContent;
-            //const fruit = btnText.substring(0, btnText.indexOf(' '));
             const fruit = btnText.split(' ')[0];
             emojiArray = emojiArray.filter((item) => item != getEmoji(fruit));
             inputx.value = emojiArray.join('');
@@ -33,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             const btnText = chngbtn.textContent;
             const fruit = btnText.split(' ')[0];
-            //const fruit = btnText.substring(0, btnText.indexOf(' '));
             emojiArray = chngItem(fruit, emojiArray);
             inputx.value = emojiArray.join('');
         });
