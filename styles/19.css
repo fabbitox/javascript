@@ -8,4 +8,10 @@
 
 .chngbtn {
     background-color: #ff8700;
+    font-size: large;
+}
+
+button {
+    border: 1px solid #ff99cc;
+    border-radius: 10px;
 }
