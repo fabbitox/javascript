@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             const btnText = chngbtn.textContent;
             const fruit = btnText.split(' ')[0];
-            emojiArray = chngItem(fruit, emojiArray);
+            emojiArray = emojiArray.map((item) => item == getEmoji(fruit) ? getChngEmoji(fruit) : item);
             inputx.value = emojiArray.join('');
         });
     }
