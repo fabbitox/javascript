@@ -41,3 +41,31 @@ h1 {
 h3 {
     margin-bottom: 18px;
 }
+
+.lose {
+    color: #990000;
+}
+
+.win {
+    animation-name: color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes color {
+    0% {
+        color: #00cccc;
+    }
+
+    30% {
+        color: #00cc00;
+    }
+
+    60% {
+        color: #cccc00;
+    }
+
+    90% {
+        color: #cc00cc;
+    }
+}
