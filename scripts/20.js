@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const comment = document.querySelector('#comment');
 
     // 초기화: 1이 폭탄 위치
-    let arr = [1, 0, 0, 0, 0, 0, 0, 0, 0];
+    let arr;
     shake();// shuffle
     let enable = true;// true일 때 눌러짐.
     let cnt = 0;// 8개 눌릴 때까지 폭탄 안 나오면 마지막은 안 눌러도 폭탄. 하트 개수
@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     shake_btn.addEventListener('click', () => {
         if (!enable) {
             shake();
-            cnt = 0;
             enable = true;
+            cnt = 0;
             for (let cell of cells) {
                 resetCell(cell);
             }
@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function shake() {
+        arr = [1, 0, 0, 0, 0, 0, 0, 0, 0];
         console.log("shake");
         arr.sort(() => Math.random() - 0.5);
         console.log(arr);
