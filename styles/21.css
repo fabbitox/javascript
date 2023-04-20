@@ -1,0 +1,37 @@
+main {
+    margin: 75px;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+[type=date] {
+    width: 240px;
+    height: 30px;
+    padding-left: 5px;
+}
+
+#boxdate {
+    margin-bottom: 25px;
+}
+
+details {
+    margin: 10px 0px;
+    font-size: x-large;
+    width: 300px;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+#d1 {
+    background-color: #cc99ff;
+}
+
+#d2 {
+    background-color: #ddbbff;
+}
+
+#d3 {
+    background-color: #eeddff;
+}
