@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
             let boxlist = data.boxOfficeResult.dailyBoxOfficeList;
             let boxtag = '';
             for (let box of boxlist) {
-                boxtag += '<details>';
+                boxtag += '<details id=\'d';
+                boxtag += `${box.rank}'>`;
                 boxtag += `<summary>${box.movieNm}</summary>`;
                 boxtag += '<ul>'
                 boxtag += `<li>순위: ${box.rank}</li><li>매출액: &#8361;${parseInt(box.salesAmt).toLocaleString()}</li><li>증감: ${box.rankInten}</li>`;
